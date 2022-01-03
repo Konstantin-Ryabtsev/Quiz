@@ -235,7 +235,13 @@
                             <constraint firstItem="Laj-GW-bhu" firstAttribute="bottom" secondItem="GCG-bJ-AVS" secondAttribute="bottom" constant="20" id="sVq-jG-jbi"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="ccd-IJ-PZE"/>
+                    <navigationItem key="navigationItem" id="ccd-IJ-PZE">
+                        <barButtonItem key="rightBarButtonItem" title="DELETE ME" id="Dvy-jM-p6X">
+                            <connections>
+                                <segue destination="2fz-gI-g8s" kind="show" id="ZgE-m0-pGy"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="2fz-gI-g8s" kind="show" id="xv9-wg-Kvf"/>
                     </connections>
@@ -244,19 +250,50 @@
             </objects>
             <point key="canvasLocation" x="1399" y="104"/>
         </scene>
-        <!--View Controller-->
+        <!--Result View Controller-->
         <scene sceneID="6so-Qm-sUt">
             <objects>
-                <viewController id="2fz-gI-g8s" sceneMemberID="viewController">
+                <viewController id="2fz-gI-g8s" customClass="ResultViewController" customModule="Quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aTX-Np-ciV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="wlt-D2-3C2">
+                                <rect key="frame" x="20" y="363" width="374" height="116"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RAy-cB-ynN">
+                                        <rect key="frame" x="128.5" y="0.0" width="117" height="60"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EM5-Dn-hjX">
+                                        <rect key="frame" x="163" y="92" width="48" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vyJ-VK-rK4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wlt-D2-3C2" firstAttribute="leading" secondItem="vyJ-VK-rK4" secondAttribute="leading" constant="20" id="K6K-Je-7rA"/>
+                            <constraint firstItem="vyJ-VK-rK4" firstAttribute="trailing" secondItem="wlt-D2-3C2" secondAttribute="trailing" constant="20" id="nE3-uD-nJb"/>
+                            <constraint firstItem="wlt-D2-3C2" firstAttribute="centerY" secondItem="aTX-Np-ciV" secondAttribute="centerY" id="zpM-sj-sd7"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="6d9-C1-qod"/>
+                    <navigationItem key="navigationItem" id="6d9-C1-qod">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="ofE-LA-q2x">
+                            <connections>
+                                <segue destination="OUm-em-lSp" kind="unwind" unwindAction="unwind:" id="9TG-Lj-lEN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bUg-fx-DYU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="OUm-em-lSp" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2301" y="104"/>
         </scene>
@@ -280,6 +317,9 @@
             <point key="canvasLocation" x="486" y="104"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="xv9-wg-Kvf"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
