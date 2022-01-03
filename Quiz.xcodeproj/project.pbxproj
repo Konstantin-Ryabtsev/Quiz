@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		0A616B0627837A7F00221579 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A616B0527837A7F00221579 /* AppDelegate.swift */; };
 		0A616B0827837A7F00221579 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A616B0727837A7F00221579 /* SceneDelegate.swift */; };
-		0A616B0A27837A7F00221579 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A616B0927837A7F00221579 /* ViewController.swift */; };
+		0A616B0A27837A7F00221579 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A616B0927837A7F00221579 /* WelcomeViewController.swift */; };
 		0A616B0D27837A7F00221579 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A616B0B27837A7F00221579 /* Main.storyboard */; };
 		0A616B0F27837A8E00221579 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A616B0E27837A8E00221579 /* Assets.xcassets */; };
 		0A616B1227837A8E00221579 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A616B1027837A8E00221579 /* LaunchScreen.storyboard */; };
@@ -19,7 +19,7 @@
 		0A616B0227837A7F00221579 /* Quiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A616B0527837A7F00221579 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0A616B0727837A7F00221579 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0A616B0927837A7F00221579 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0A616B0927837A7F00221579 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		0A616B0C27837A7F00221579 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0A616B0E27837A8E00221579 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A616B1127837A8E00221579 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,7 +58,7 @@
 			children = (
 				0A616B0527837A7F00221579 /* AppDelegate.swift */,
 				0A616B0727837A7F00221579 /* SceneDelegate.swift */,
-				0A616B0927837A7F00221579 /* ViewController.swift */,
+				0A616B0927837A7F00221579 /* WelcomeViewController.swift */,
 				0A616B0B27837A7F00221579 /* Main.storyboard */,
 				0A616B0E27837A8E00221579 /* Assets.xcassets */,
 				0A616B1027837A8E00221579 /* LaunchScreen.storyboard */,
@@ -137,7 +137,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A616B0A27837A7F00221579 /* ViewController.swift in Sources */,
+				0A616B0A27837A7F00221579 /* WelcomeViewController.swift in Sources */,
 				0A616B0627837A7F00221579 /* AppDelegate.swift in Sources */,
 				0A616B0827837A7F00221579 /* SceneDelegate.swift in Sources */,
 			);
@@ -289,6 +289,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V73ZC8W994;
 				INFOPLIST_FILE = Quiz/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,6 +309,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V73ZC8W994;
 				INFOPLIST_FILE = Quiz/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
