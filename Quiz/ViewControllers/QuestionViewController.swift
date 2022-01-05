@@ -24,11 +24,8 @@ class QuestionViewController: UIViewController {
     
     @IBOutlet weak var questionProgressView: UIProgressView!
         
-    var answerChoosen = [Answer]() {
-        didSet {
-            print(#line, #function, answerChoosen)
-        }
-    }
+    var answerChoosen = [Answer]()
+    
     private var currentAnswers: [Answer] {
         currentQuestion.answers
     }
