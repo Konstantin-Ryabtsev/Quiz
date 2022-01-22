@@ -27,6 +27,7 @@ class ResultsViewController: UIViewController {
         let frequencyOfAnswers = answers.reduce(into: [:]) { counts, answer in
             counts[answer.type, default: 0] += 1
         }
+        print(#line, #function, frequencyOfAnswers)
         let mostCommonAnswer = frequencyOfAnswers.sorted(by: { $0.value > $1.value }).first!.key
         updateUI(with: mostCommonAnswer)
         

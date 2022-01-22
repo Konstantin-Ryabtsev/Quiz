@@ -22,6 +22,9 @@ class QuestionViewController: UIViewController {
     @IBOutlet var rangedLabels: [UILabel]!
     @IBOutlet weak var rangedSlider: UISlider!
     
+    @IBOutlet weak var imagesStackView: UIStackView!
+    @IBOutlet var imageButtons: [UIButton]!
+    
     @IBOutlet weak var questionProgressView: UIProgressView!
         
     var answerChoosen = [Answer]()
@@ -66,12 +69,26 @@ class QuestionViewController: UIViewController {
         }
         
         func updateRangeStack() {
+            rangedStackView.isHidden = false
             rangedLabels.first?.text = currentAnswers.first?.text
             rangedLabels.last?.text = currentAnswers.last?.text
-            rangedStackView.isHidden = false
         }
         
-        for stackView in [singleStackView, multiplyStackView, rangedStackView] {
+        func updateImageStack() {
+            imagesStackView.isHidden = false
+            for (index, button) in imageButtons.enumerated() {
+                button.setTitle(nil, for: [])
+                button.setImage(UIImage(), for: [])
+                button.tag = index
+            }
+            for (button, answer) in zip(imageButtons, currentAnswers) {
+                button.setTitle("", for: [])
+                button.setImage(UIImage(named: answer.text), for: [])
+            }
+            
+        }
+        
+        for stackView in [singleStackView, multiplyStackView, rangedStackView, imagesStackView] {
             stackView?.isHidden = true
         }
         
@@ -88,6 +105,8 @@ class QuestionViewController: UIViewController {
             updateMultiplyStack()
         case .range:
             updateRangeStack()
+        case .image:
+            updateImageStack()
         }
     }
     
@@ -127,7 +146,14 @@ class QuestionViewController: UIViewController {
         }
         nextQuestion()
     }
+    
+    @IBAction func imageButtonPressed(_ sender: UIButton) {
+        singleButtonPressed(sender)
         
+        //print(#line, #function, "button \(sender.tag) pressed")
+        //nextQuestion()
+    }
+    
     @IBSegueAction func resultsSegue(_ coder: NSCoder) -> ResultsViewController? {
         return ResultsViewController(coder: coder, answerChoosen)
     }

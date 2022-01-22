@@ -11,11 +11,17 @@ struct Question {
     let answers: [Answer]
     
     static let all: [Question] = [
-        Question(text: "Какую еду вы предпочитаете?", type: .single, answers: [
-            Answer(text: "Стейк", type: .dog),
-            Answer(text: "Рыбу", type: .cat),
-            Answer(text: "Морковь", type: .rabbit),
-            Answer(text: "Кукурузу", type: .turtle),
+        Question(text: "Какую еду вы предпочитаете?", type: .image, answers: [
+            Answer(text: "meat", type: .dog),
+            Answer(text: "fish", type: .cat),
+            Answer(text: "carrot", type: .rabbit),
+            Answer(text: "corn", type: .turtle),
+        ]),
+        Question(text: "Когда вам страшно, Вы", type: .single, answers: [
+            Answer(text: "Убегаете", type: .rabbit),
+            Answer(text: "Нападаете", type: .dog),
+            Answer(text: "Не бывает страшно", type: .turtle),
+            Answer(text: "Ведете себя осторожно", type: .cat),
         ]),
         Question(text: "Что вы любите делать?", type: .multiply, answers: [
             Answer(text: "Плавать", type: .turtle),

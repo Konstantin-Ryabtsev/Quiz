@@ -6,5 +6,5 @@
 //
 
 enum ResponceType {
-    case single, multiply, range
+    case single, multiply, range, image
 }
