@@ -15,3 +15,5 @@ Created by Konstantin Ryabtsev on 05.01.2022
 ![Screenshot4](https://github.com/Konstantin-Ryabtsev/Quiz/blob/main/Quiz/Screenshots/Screenshot04.png?raw=true)
 
 ![Screenshot5](https://github.com/Konstantin-Ryabtsev/Quiz/blob/main/Quiz/Screenshots/Screenshot05.png?raw=true)
+
+![Screenshot6](https://github.com/Konstantin-Ryabtsev/Quiz/blob/main/Quiz/Screenshots/Screenshot06.png?raw=true)
